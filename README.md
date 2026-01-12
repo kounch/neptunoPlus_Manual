@@ -20,7 +20,7 @@ In order to make HTML, PDF and ePub files from the source code (`.adoc` files), 
 
 ## Construcción de esta documentación
 
-Para poder generar desde el código fuente (archivos `.adoc`), ficheros PDF y ePub, se han de seguir estos pasos (ajustando las rutas a directorios y ficheros según sea necesario):
+Para poder generar desde el código fuente (archivos `.adoc`), ficheros HTML, PDF y ePub, se han de seguir estos pasos (ajustando las rutas a directorios y ficheros según sea necesario):
 
 - Instalar [asciidoctor](https://asciidoctor.org), [asciidoctor PDF](https://asciidoctor.org/docs/asciidoctor-pdf/) y [asciidoctor EPUB3](https://asciidoctor.org/docs/asciidoctor-epub3/)
 
