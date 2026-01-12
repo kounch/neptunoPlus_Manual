@@ -1,0 +1,6 @@
+.vscode/*
+build/*
+misc/*
+
+.devbox
+devbox.lock
