@@ -1,6 +1,6 @@
 = Manual de neptUNO+
 :author: kounch
-:revnumber: 1.0.0
+:revnumber: 1.0.1
 :doctype: book
 :media: prepress
 :docinfo: shared
@@ -7914,16 +7914,16 @@ El https://es.wikipedia.org/wiki/Camputers_Lynx[Lynx] fue un ordenador doméstic
 
 La versión para neptUNO+ ha sido https://github.com/Kyp069/lynx[desarrollada por Kyp069] y tiene las siguientes características:
 
-- Modos 48kB y 96 kB
-- ROM Scorpion opcional
+- Modos 48kB, 96 kB y 96kB Scorpion
 - Carga de programas usando la entrada de audio
-- Carta desde archivos TZX
+- Carga desde archivos TZX
+- Emulación de controladora de disquete 
 
 ===== Formato de Tarjeta microSD
 
 Se debe utilizar una tarjeta microSD con la primera partición en formato exFAT o FAT32, para almacenar todos los ficheros necesarios.
 
-Es posible almacenar en la tarjeta microSD ficheros de cinta en formato `TZX`, así como ficheros `ROM` alternativos.
+Es posible almacenar en la tarjeta microSD ficheros de cinta en formato `TZX`, así como ficheros `LDF` de imagen de disquete de 200K.
 
 ===== Controles
 
@@ -7944,16 +7944,16 @@ Al pulsar `F12`, se mostrará el menú con las distintas opciones del core. Se p
 
 [role="center",width="50%",cols="1a", frame=none, grid=none]
 |===
-|image:img/lynx.jpg[scaledwidth=100%]
+|image:img/lynx.png[scaledwidth=100%]
 |===
 
 En él se pueden activar, desactivar o configurar las siguientes opciones:
 
-- `LOAD ROM`: Para cargar un fichero de ROM alternativo
 - `Load TZX`: Para cargar desde la tarjeta un archivo de imagen de cinta TAP, CSW o TZX
-- `Tape Sound`:
-- `RAM`: Para elegir la cantidad de memoria RAM deseada
-- `ROM`: Para elegir si usar la ROM estándar o Scorpion
+- `Tape Sound`: Para indicar si se quiere poder oir el sonido de carga de cinta
+- `Mount LDF`: Para montar una imagen de disco
+- `Floppy`: Para deshabilitar o habilitar el soporte de imágenes de disco
+- `Model`: Para indicar el modelo de Lynx a simular
 - `Bank 2 CAS enable`:
 - `Reset`: Reinicia el core
 - `Exit`: Sale del menú de configuración
@@ -7971,6 +7971,7 @@ Desde BASIC, se suele cargar desde un archivo TZX en la microSD, una cinta (u <<
 ----
 TAPE n
 LOAD "NOMBRE"
+RUN
 ----
 
 Donde `n` es un número (entre 1 y 5), según como se haya realizado la grabación, y `NOMBRE` es, obligatoriamente el nombre a cargar desde la cinta.
@@ -7990,7 +7991,30 @@ El script http://retrowiki.es/viewtopic.php?f=31&t=200036835[lince] facilita tod
 
 <<<
 
-[%always]
+Además, las versiones más recientes del core, incorporan soporte para imágenes de disco `LDF`.
+
+Para utilizarlas, primero se ha de inicializar la controladora de disco:
+
+[source]
+----
+XROM
+----
+
+Para ver el contenido de un disco insertado, usar la sequencia de comandos:
+
+[source]
+----
+EXT DIR
+----
+
+De forma similar a la carga desde cinta, se puede usar `EXT LOAD` para cargar ficheros de BASIC, y `EXT MLOAD` para ficheros binarios. También es obligatorio indicar el nombre del fichero a cargar, entre `"`.
+
+[source]
+----
+EXT LOAD "NOMBRE"
+RUN
+----
+
 <<<
 
 ==== Coleco Adam
