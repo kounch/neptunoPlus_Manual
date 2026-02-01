@@ -1,6 +1,6 @@
 = Manual de neptUNO+
 :author: kounch
-:revnumber: 1.0.1
+:revnumber: 1.0.2
 :doctype: book
 :media: prepress
 :docinfo: shared
@@ -7914,7 +7914,7 @@ El https://es.wikipedia.org/wiki/Camputers_Lynx[Lynx] fue un ordenador doméstic
 
 La versión para neptUNO+ ha sido https://github.com/Kyp069/lynx[desarrollada por Kyp069] y tiene las siguientes características:
 
-- Modos 48kB, 96 kB y 96kB Scorpion
+- Modos 48kB, 96 kB y 96kB Skorpion
 - Carga de programas usando la entrada de audio
 - Carga desde archivos TZX
 - Emulación de controladora de disquete 
@@ -7923,7 +7923,7 @@ La versión para neptUNO+ ha sido https://github.com/Kyp069/lynx[desarrollada po
 
 Se debe utilizar una tarjeta microSD con la primera partición en formato exFAT o FAT32, para almacenar todos los ficheros necesarios.
 
-Es posible almacenar en la tarjeta microSD ficheros de cinta en formato `TZX`, así como ficheros `LDF` de imagen de disquete de 200K.
+Es posible almacenar en la tarjeta microSD ficheros de cinta en formato `TZX`, así como ficheros `LDF` de imagen de disquete de 200K o de 800K.
 
 ===== Controles
 
