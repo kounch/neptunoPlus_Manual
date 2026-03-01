@@ -5,7 +5,7 @@ header:
   font-family: M+ 1mn
   recto:
     right:
-      content: "{document-title} ({docdate}): {section-or-chapter-title}"
+      content: "{document-title} ({revnumber}): {section-or-chapter-title}"
   verso:
     left:
-      content: "{document-title} ({docdate}): {section-or-chapter-title}"
+      content: "{document-title} ({revnumber}): {section-or-chapter-title}"
